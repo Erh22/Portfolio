@@ -1,0 +1,733 @@
+body::after, body::before {
+    /* these are the 2 half blocks which cover the content once the animation is triggered */
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    }
+    body::before {
+    top: 0;
+    transform: translateY(-100%);
+    }
+    body::after {
+    bottom: 0;
+    transform: translateY(100%);
+    }
+    body.page-is-changing::after, body.page-is-changing::before {
+    transform: translateY(0);
+    }
+
+/* navbar特效 */
+  /* Rectangle Out */
+.hvr-rectangle-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #28415b;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-rectangle-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #375a7f;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 0.25rem;
+  }
+  .hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+    color: #FAFDFF;
+  }
+  .hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+
+
+/* 首頁CSS */
+
+.index_body,
+.contact_body {
+    background-color: #FAFDFF;
+    
+}
+.index_body,
+.portfolio_body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* .menu_hover:hover{
+
+      } */
+
+.myBg {
+    width: auto;
+    height: auto;
+    display: block;
+    text-align: center;
+}
+
+.erh {
+    color: #28415b;
+}
+
+
+/* 首頁大圖底色&大小 */
+
+.homepage {
+    background-color: #E5E8EA;
+    margin-top: 50px;
+    /* height: auto;
+    width: auto; */
+}
+
+.B_block {
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 作品集標題設定 */
+
+.homepageTitle {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 73px;
+    padding-bottom: 2px;
+    text-align: center;
+    color: #375a7f;
+    border-bottom: 2px solid #375a7f;
+}
+
+
+/* 作品集四張照片的間距 */
+
+.homepagePortfolioImg {
+    margin-left: 50px;
+}
+
+
+/* 作品集四張照片置中 */
+
+.PortfolioImg {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* MORE設定 */
+
+.homepageMore {
+    width: auto;
+    height: auto;
+    /* margin-left: auto;
+    margin-right: 0px; */
+    /* margin-bottom: 50px; */
+    margin-top: 10px;
+    padding-bottom: 2px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+    /* border-bottom: 1px solid ; */
+    text-align: right;
+    color: #375a7f;
+    border:2px blue none;
+    background-color: #FAFDFF;
+}
+/* .homepageMore:focus{
+    border:2px blue none;
+} */
+
+.homepageMore:hover {
+    color: #28415b;
+}
+
+
+/* 分隔底線 */
+
+.B-border {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 50px; */
+    /* margin-top: 20px; */
+    /* padding-bottom: 2px; */
+    text-align: center;
+    border-bottom: 2px solid #375a7f;
+}
+
+
+/* 特殊經歷>小標題 */
+
+.l_title {
+    font-size: 18px;
+    /* color: #343A40; */
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #375a7f;
+}
+
+.l_title:hover {
+    color: #28415b;
+}
+
+.l_titleBorder {
+    border-bottom: 1px solid #375a7f;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.slideImg{
+    display: none;
+}
+.hiddenImg{
+    margin-top: 50px;
+}
+.huntitem{
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+.waterfallhunt {
+    column-count: 6;
+    grid-column-gap: 0;
+}
+
+
+
+/* 版權 */
+
+.copyRight {
+    width: auto;
+    height: 90px;
+    background-color: #28415b;
+    /* text-align: center; */
+    font-size: 16px;
+}
+
+
+/* 關於我CSS */
+
+.aboutMe_body {
+    background-color: #FAFDFF;
+    color: #375a7f;
+    font-size: 14px;
+}
+
+
+/* 關於我 大頭貼 */
+
+.aboutMe_headshot {
+    clip-path: circle(50% at 50% 50%);
+    width: 230px;
+    height: 230px;
+}
+
+
+/* 關於我 簡介區塊 */
+
+.aboutMeDiv {
+    width: auto;
+    height: 400px;
+    /* padding-top: 50px; */
+    margin-top: 50px;
+    margin-bottom: auto;
+}
+
+
+/* 簡介內文 */
+
+.p_Introduction {
+    color: #343A40;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 150;
+    margin-bottom: 16px;
+}
+
+.aboutMeTitle {
+    width: auto;
+    height: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 2px;
+    /* text-align: center; */
+    border-bottom: 2px solid;
+    color: #375a7f;
+}
+
+
+/* 專長小圓圖 */
+
+.skillPicture {
+    clip-path: circle(50% at 50% 50%);
+    width: 150px;
+    height: 150px;
+}
+/* .skillDiv{
+    width:220px;
+    height:220px;
+    border-radius:110px;
+    background-color: #303030;
+    
+} */
+
+/* 專長CSS */
+.da-thumbs {
+	list-style: none;
+	width: 984px;
+	height: auto;
+	position: relative;
+	margin: 20px 20px;
+    padding: 0;
+    font-family: 'Concert One', cursive;
+}
+.da-thumbs li {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+	background: #fff;
+	/* padding: 8px; */
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	border-radius: 5rem;
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+	display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.da-thumbs li a {
+	overflow: hidden;
+}
+.da-thumbs li a div {
+	position: absolute;
+	background: #375a7f;
+	/* background: rgba(75,75,75,0.7); */
+	background: rgba(72,117,158,0.7);
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+.da-thumbs li a div span {
+	display: block;
+	padding: 10px 0;
+	/* margin: 40px 20px 20px 20px; */
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: auto;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: rgba(255,255,255,0.9);
+	/* text-shadow: 1px 1px 1px rgba(0,0,0,0.2); */
+	/* border-bottom: 1px solid rgba(255,255,255,0.5); */
+	/* box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3); */
+}
+
+.circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 999em;
+    background-color: #343A40;
+    margin-bottom: 0px;
+    display: block;
+}
+
+.linkLeft {
+    width: auto;
+    height: 200%;
+    border-left: solid #343A40 1px;
+    padding-left: 15px;
+    margin-top: 0px;
+    display: block;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* 經歷timeline */
+
+
+/* timeline超連結設定 */
+
+#timeline a {
+    color: #375a7f;
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#timeline a:hover,
+#timeline a.selected {
+    color: #28415b;
+}
+
+#timeline {
+    width: 500px;
+    height: 450px;
+    overflow: hidden;
+    /* margin: 40px auto; */
+    position: relative;
+    background: url('../_image/dot.png') 3px top repeat-y;
+}
+
+
+/* timeline選單設定 */
+
+#dates {
+    width: 100px;
+    height: 600px;
+    overflow: hidden;
+    float: left;
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Concert One', cursive;
+    z-index: 999;
+}
+
+#dates li {
+    list-style: none;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24px;
+    padding-left: 10px;
+    background: url('../_image/big_dot.png') left center no-repeat;
+}
+
+#dates a {
+    line-height: 38px;
+    padding-bottom: 10px;
+}
+
+#dates .selected {
+    font-size: 38px;
+}
+
+
+/* timeline內容設定 */
+
+#issues {
+    width: 400px;
+    height: 600px;
+    overflow: hidden;
+    float: left;
+}
+
+#issues li {
+    max-width: 400px;
+    /* width: 400px;*/
+    height: 600px;
+    list-style: none;
+    /* text-align: center; */
+    /* add*/
+    /* margin-top: auto;
+  margin-bottom: auto; */
+}
+
+#issues li.selected img {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+#issues li img {
+    /* // float: left; */
+    width: 200px;
+    /* add*/
+    margin: 10px 30px 10px 50px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+    /* IE 8 */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF, endColorstr=#00FFFFFF);
+    /* IE 6 & 7 */
+    zoom: 1;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    -webkit-transform: scale(0.7, 0.7);
+    -moz-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+}
+
+#issues li h1 {
+    color: #28415b;
+    font-size: 48px;
+    /* text-align: center; */
+    /* text-shadow: #000 1px 1px 2px; */
+    /* font-family: 'Anton', sans-serif; */
+    font-family: 'Concert One', cursive;
+    /* color: #ccc;
+  text-shadow: #000 1px 1px 2px; */
+    margin-bottom: 5px;
+    /* font-size: 18px; */
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#issues li p {
+    font-size: 14px;
+    margin: 10px 20px;
+    font-weight: normal;
+    line-height: 22px;
+    /* text-shadow: #000 1px 1px 2px; */
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#grad_top,
+#grad_bottom {
+    width: 500px;
+    height: 40px;
+    position: absolute;
+}
+
+#grad_top {
+    top: 0;
+    background: url('../_image/grad_top.png') repeat-x;
+}
+
+#grad_bottom {
+    bottom: 0;
+    background: url('../_image/grad_bottom.png') repeat-x;
+}
+
+#next,
+#prev {
+    position: absolute;
+    left: 45%;
+    /* left: 55%;*/
+    font-size: 70px;
+    width: 38px;
+    height: 22px;
+    background-position: 0 -44px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+#next:hover,
+#prev:hover {
+    background-position: 0 0;
+}
+
+#next {
+    bottom: 0;
+    background-image: url('../_image/down.png');
+}
+
+#prev {
+    top: 0;
+    background-image: url('../_image/up.png');
+}
+
+#next.disabled,
+#prev.disabled {
+    opacity: 0.2;
+}
+
+
+/* 作品集CSS */
+
+.portfolio_body {
+    background-color: #FAFDFF;
+}
+
+
+/* 瀑布流 */
+
+.waterfall {
+    column-count: 3;
+    grid-column-gap: 0;
+}
+@media screen and (max-width: 576px){
+    .waterfall {
+        column-count: 1;
+        grid-column-gap: 0;
+    }
+}
+/* @media screen and (max-width: 800px){
+    .waterfall {
+        column-count: 2;
+        grid-column-gap: 0;
+    }
+} */
+
+.item {
+    /* box-sizing: border-box; */
+    /* break-inside: avoid; */
+    /* padding: 10px; */
+    break-inside: avoid;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    font-size: 16px;
+    /* color: #E5E8EA; */
+    box-sizing: border-box;
+    border: 1px solid #303030;
+    border-radius: 0.25rem;
+    background-color: #303030;
+    font-family: 'Noto Sans TC', sans-serif;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.waterFallImg {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+
+
+.category {
+    margin-bottom: 15px;
+    margin-top: 70px;
+}
+.checkbox input[type=checkbox]{
+    opacity: 0;
+}
+
+/* .myShadow{
+    -webkit-box-shadow: 10px 10px 25px 4px rgba(229,232,234,0.39);
+    -moz-box-shadow: 10px 10px 25px 4px rgba(229,232,234,0.39);
+    box-shadow: 10px 10px 25px 4px rgba(229,232,234,0.39);
+  } */
+
+/* .contactBgImg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),url('../_image/資產 11.png');
+    width: 100%;
+    height: auto;
+    opacity:0.1;
+} */
+
+/* 與我聯繫 */
+.contact_body{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8))
+    ,url('../_image/資產 11.png'); */
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #375a7f;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.icon{
+    width: 40px;
+    height: auto;
+}
+.contentTr{
+    
+    color: #FAFDFF;
+    
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.contentTr td{
+    padding: 10px;
+    border: #375a7f 1px solid;
+}
+.contentTr tr{
+    width: 100%;
+    height: auto;
+}
+.contentTr tr:first-child{
+    background-color: #375a7f;
+    
+}
+.td_1{
+    border-top-left-radius: 10px;
+    
+    text-align: center;
+}
+.td_2{
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+.contentTr tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+.contentTr tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+
+/* 進場延遲 */
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color:#FAFDFF;
+    background-image: url("../_image/loading_2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+        }
+ .load{
+     display: none;
+ }       
+
+ #gotop{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    /* font-size: 20px; */
+    color: #375a7f;
+    /* fill: #375a7f; */
+    cursor: pointer;
+    }
+
