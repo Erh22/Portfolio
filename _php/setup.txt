@@ -1,0 +1,183 @@
+create database h2_web default character set utf8;
+use h2_web;
+
+create table portfolio (
+   portfolioId int auto_increment primary key,
+   name text,
+   picture text,
+   category text
+);
+
+insert into portfolio
+(name,picture,category)
+values
+('2D_01','2D_01.jpg','2D');
+
+<--2D匯入-->
+insert into portfolio
+(name,picture,category)
+values
+('歐登LOGO設計','2D_01.jpg','2D'),
+('傢俱新品上市海報','2D_02.jpg','2D'),
+('傢俱新品上市海報','2D_03.jpg','2D'),
+('傢俱新品上市海報','2D_04.jpg','2D'),
+('傢俱新品上市海報','2D_05.jpg','2D'),
+('傢俱新品上市海報','2D_06.jpg','2D'),
+('傢俱新品上市海報','2D_07.jpg','2D'),
+
+insert into portfolio
+(name,picture,category)
+values
+('傢俱新品上市海報','2D_08.jpg','2D'),
+('傢俱新品上市海報','2D_09.jpg','2D'),
+('傢俱新品上市海報','2D_10.jpg','2D'),
+('傢俱新品上市海報','2D_11.jpg','2D'),
+('傢俱新品上市海報','2D_12.jpg','2D'),
+('傢俱新品上市海報','2D_13.jpg','2D'),
+('傢俱新品上市海報','2D_14.jpg','2D'),
+('傢俱新品上市海報','2D_15.jpg','2D'),
+('傢俱新品上市海報','2D_16.jpg','2D'),
+('傢俱新品上市海報','2D_17.jpg','2D'),
+('傢俱新品上市海報','2D_18.jpg','2D'),
+('傢俱新品上市海報','2D_19.jpg','2D'),
+('傢俱新品上市海報','2D_20.jpg','2D'),
+('傢俱新品上市海報','2D_21.jpg','2D'),
+('傢俱新品上市海報','2D_22.jpg','2D'),
+('傢俱新品上市海報','2D_23.jpg','2D'),
+('傢俱新品上市海報','2D_24.jpg','2D'),
+('傢俱新品上市海報','2D_25.jpg','2D'),
+('傢俱新品上市海報','2D_26.jpg','2D'),
+('傢俱新品上市海報','2D_27.jpg','2D'),
+('傢俱新品上市海報','2D_28.jpg','2D'),
+('傢俱新品上市海報','2D_29.jpg','2D'),
+('傢俱新品上市海報','2D_30.jpg','2D'),
+('傢俱新品上市海報','2D_31.jpg','2D'),
+('傢俱新品上市海報','2D_32.jpg','2D'),
+('傢俱新品上市海報','2D_33.jpg','2D'),
+('傢俱新品上市海報','2D_34.jpg','2D'),
+('傢俱新品上市海報','2D_35.jpg','2D'),
+('傢俱新品上市海報','2D_36.jpg','2D'),
+('傢俱新品上市海報','2D_37.jpg','2D'),
+('傢俱新品上市海報','2D_38.jpg','2D'),
+('傢俱新品上市海報','2D_39.jpg','2D'),
+('傢俱新品上市海報','2D_40.jpg','2D');
+
+<--3D匯入-->
+insert into portfolio
+(name,picture,category)
+values
+('造型耳機','3D_01.jpg','3D'),
+('吹風機','3D_02.jpg','3D'),
+('茶具','3D_03.jpg','3D'),
+('青鳥咖啡機3D','3D_04.jpg','3D');
+
+
+<--3D&product-->
+insert into portfolio
+(name,picture,category)
+values
+('手工具','3D&product_01.jpg','3D&PD'),
+('Bath gel x Jar','3D&product_02.jpg','3D&PD'),
+('Bluebird 青鳥咖啡機','3D&product_03.jpg','3D&PD'),
+('Easy Wear','3D&product_04.jpg','3D&PD'),
+('Easy take for box cutter','3D&product_05.jpg','3D&PD'),
+('Solar street light','3D&product_06.jpg','3D&PD'),
+('智慧把手熨斗','3D&product_07.jpg','3D&PD'),
+('Timeline夜燈','3D&product_08.jpg','3D&PD'),
+('壓蒜器','3D&product_09.jpg','3D&PD'),
+('個人藏書章','3D&product_10.jpg','3D&PD');
+
+<--productdesign-->
+insert into portfolio
+(name,picture,category)
+values
+('錦上添花-西式茶具設計','product_01.jpg','productdesign'),
+('檸檬包裝設計','product_02.jpg','productdesign'),
+('面膜包裝設計','product_03.jpg','productdesign');
+
+<--others-->
+insert into portfolio
+(name,picture,category)
+values
+('LISSIL莉絲爾-UI設計','others_1.jpg','others');
+
+
+create table skill (
+   skillId int auto_increment primary key,
+   skillName text,
+   skillpicture text
+);
+
+insert into skill
+(skillName,skillpicture)
+values
+('ADOBE Illustrator','AI.png'),
+('ADOBE Photoshop','PS.png'),
+('ADOBE XD','XD.png'),
+('AUTOCAD','Cad.png'),
+('RHINO','rhino.png'),
+('ProE','proe.png'),
+('keyshot','keyshot.png'),
+('VSCode','vscode.png'),
+('HTML','HTML5.png'),
+('CSS','CSS3.png'),
+('JavaScript','JS.png'),
+('Bootstrap','Bootstrap4.png'),
+('MySQL','MySQL.png');
+
+insert into skill
+(skillName,skillpicture)
+values
+('Jquery','jquery.png'),
+('PHP','php.png');
+
+
+<--測試用留言板-->
+create table guesttest (
+   guestId int auto_increment primary key,
+   guestName varchar(10),
+   guestContent text
+);
+
+<--正式留言板-->
+create table guest (
+   guestId int auto_increment primary key,
+   guestName varchar(10),
+   guestContent text
+);
+
+
+<script>
+    $(document).ready(function() {
+    $('body').css('display', 'none');
+    $('body').fadeIn(1000); //一開始淡入
+    $('a.link').click(function(event) { //點選 class 為 link 的 a 元件時觸發
+    event.preventDefault(); //取消事件預設動作
+    newLocation = this.href;
+    $('body').fadeOut(1000, newpage); //點選後淡出
+    });
+  
+    function newpage() {
+    window.location = newLocation;
+    }
+    });
+    </script>
+
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+
+
+   $("#aboutMe").hover(function() {
+            $("#aboutMe").html('關於我');
+        }, function() {
+            $("#aboutMe").html('ABOUT ME');
+        })
+        $("#portfolio").hover(function() {
+            $("#portfolio").html('作品集');
+        }, function() {
+            $("#portfolio").html('PORTFOLIO');
+        })
+        $("#contact").hover(function() {
+            $("#contact").html('與我聯繫');
+        }, function() {
+            $("#contact").html('CONTACT ME');
+        })
